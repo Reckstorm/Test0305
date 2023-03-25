@@ -35,6 +35,7 @@
 
             Button red = new Button();
             Button green = new Button();
+            Button blue = new Button();
 
             red.Size = new Size(100, 50);
             red.Location = new Point(20, 20);
@@ -43,6 +44,10 @@
             green.Size = new Size(100, 50);
             green.Location = new Point(20, 70);
             green.Text = "Green";
+
+            blue.Size = new Size(100, 50);
+            blue.Location = new Point(20, 120);
+            blue.Text = "Blue";
 
             red.Click += (e, s) =>
             {
@@ -54,8 +59,14 @@
                 this.BackColor = Color.Green;
             };
 
+            blue.Click += (e, s) =>
+            {
+                this.BackColor = Color.Blue;
+            };
+
             this.Controls.Add(red);
             this.Controls.Add(green);
+            this.Controls.Add(blue);
         }
 
         #endregion
